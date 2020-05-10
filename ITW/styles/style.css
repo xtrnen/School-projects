@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+}
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    padding-bottom: 20px;
+    font-size: 36px;
+    color: rgb(63, 27, 7);
+    text-transform: uppercase; 
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(72, 30, 8);
+    position: fixed;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#intro {
+    background-image: url('../res/wallpaper_1.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-right: 10vw;
+}
+#basic-intro {
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+}
+#intro #basic-intro-text {
+    display: block;
+    color: white;
+    width: 50vw;
+    padding-left: 45vw;
+}
+#basic-intro-text {
+    padding-top: 15px;
+}
+#quote {
+    color: white;
+    padding-left: 45vw;
+}
+#intro h3 {
+    display: block;
+    color: white;
+    padding-top: 25vh;
+    width: 50vw;
+    padding-left: 45vw;
+}
+#home-logo {
+    width: 25%;
+    padding-top: 10px;
+}
+#home-logo i:hover {
+    background-color: rgb(173, 96, 57);
+    border-radius: 10px;
+}
+#home-logo i {
+    color: white;
+    font-size: 36px;
+}
+#header-logo {
+    color: white;
+    width: 50%;
+    font-size: 36px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+}
+#header-list {
+    width: 25%;
+    padding-top: 15px;
+}
+#header-nav li {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+#header-nav li:hover {
+    background-color: rgb(173, 96, 57);
+    border-radius: 20px;
+}
+#header-nav li a {
+    font-size: 20px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 0 50px 0;
+}
+.content {
+    color: rgb(78, 31, 7);
+    width: 50%;
+}
+/*Index content CSS*/
+.aktuality-part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.aktuality-item {
+    width: 100%;
+}
+#events {
+    padding-top: 50px;
+}
+.event {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.event-item {
+    width: 40%;
+}
+.content-items {
+    margin: 0 15px 15px 15px;
+    background-color: rgb(163, 91, 55);
+    padding: 15px;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.event-item h3 {
+    display: block;
+    font-size: 24px;
+    padding: 15px 0 15px 0;
+    text-transform: uppercase; 
+    border-bottom: 2px dashed black;
+}
+.event-item-date, .event-item-hour {
+    display: inline-block;
+    padding: 15px 15px 15px 0;
+    font-size: 20px;
+}
+.event-item-description {
+    font-style: italic;
+}
+/*****/
+footer {
+    background-color: rgb(72, 30, 8);
+    color: white;
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer-item {
+    width: 40%;
+}
+/*****/
+.left-nav {
+    position: fixed;
+    float: left;
+    top: 25vh;
+    background-color: rgb(72, 30, 8);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 15px 15px 15px 0;
+}
+.left-nav ul li {
+    list-style-type: none;
+}
+.left-nav ul li:first-child {
+    padding-bottom: 20px;
+}
+.left-nav ul li a {
+    font-size: 20px;
+    color: white;
+}
+.left-nav ul li a:hover {
+    color: rgb(209, 117, 71);
+}
+.left-nav #def {
+    color: rgb(209, 117, 71);
+}
+.content-order {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    color: black;
+    width: 45%;
+    padding: 15px 15px 20px 0;
+}
+.card-desc {
+    background-color: rgb(163, 91, 55);
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-title {
+    padding-bottom: 15px;
+}
+.card-price {
+    padding-bottom: 15px;
+}
+.card-price-info {
+    margin-right: 1em;
+    font-weight: bold;
+}
+.card-price-number {
+    margin-right: 0.5em;
+    font-weight: bold;
+}
+.card-price-tag {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.service-content h3 {
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+.service-content-desc {
+    font-style: italic;
+}
+.service-content-info {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.contacts-item {
+    text-align: left;
+    padding-left: 25%;
+}
+.contacts-item-span-class {
+    margin-right: 1em;
+}
+.contacts-item-span-info {
+    padding-left: 10px;
+    color: white;
+}
+#map {
+    display: block;
+    padding-top: 20px;
+}
+#map-table {
+    text-align: left;
+    padding-left: 40%;
+}
+#map-table a {
+    color: black;
+}
+#basic-intro-button {
+    background-color: rgb(163, 91, 55);
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+}
+#basic-intro-button:hover {
+    background-color: transparent;
+    border-style: solid;
+    border-color: rgb(163, 91, 55);
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+}
+.content-img {
+    padding-top: 20px;
+}
+@media print {
+    *{
+        width: 100%;
+    }
+    header, footer, #intro, .left-nav, #meetingIMG {
+        display: none;
+        page-break-after: avoid;
+    }
+    .aktuality-part {
+        display: block;
+        page-break-after: always;
+    }
+    .event-item, .content-items, .aktuality-item, .card, .card-desc {
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+    .card {
+        display: inline;
+    }
+    .card-img {
+        display: none;
+    }
+    .content-order, .event {
+        display: block;
+    }
+    #overview {
+        display: block;
+    }
+}

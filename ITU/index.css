@@ -1,0 +1,22 @@
+#workspace {
+    height: 1000px;
+}
+#menu {
+    height: 1000px;
+    border-right: 1px solid black;
+}
+#context-menu{
+    position: absolute;
+    display: none;
+}
+.nav-link{
+    margin-left: -15px;
+}
+.menu-item{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;    
+}

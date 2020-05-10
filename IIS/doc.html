@@ -1,0 +1,92 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<!-- Zkontrolujte prosím nastavení kódování v hlavičce dokumentu 
+     podle použitého editoru -->
+
+<h1>Cech Zlodějů</h1> <!-- Nahradte názvem svého zadání -->
+
+<dl>
+	<dt>Autoři</dt>
+	<dd>Jan Trněný <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xtren03@stud.fit.vutbr.cz">xtrnen03@stud.fit.vutbr.cz</a> -
+		frontend
+	</dd>
+	<dd>Jakub Trubka <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	    <a href="mailto:xtrubk00@stud.fit.vutbr.cz">xtrubk00@stud.fit.vutbr.cz</a> - 
+		backend
+	</dd>
+	<dt>URL aplikace</dt>
+    <dd><a href="http://www.stud.fit.vutbr.cz/~xtrubk00/IIS">http://www.stud.fit.vutbr.cz/~xtrubk00/IIS</a></dd>
+    <dd><a href="http://www.stud.fit.vutbr.cz/~xtrubk00">http://www.stud.fit.vutbr.cz/~xtrubk00</a></dd>
+</dl>
+
+<h2>Uživatelé systému pro testování</h2>
+<table>
+<tbody><tr><th>Login</th><th>Heslo</th><th>Role</th></tr>
+<tr><td>Morvud</td><td>123</td><td>Vůdce</td></tr>
+<tr><td>Nothrax</td><td>123</td><td>Vůdce</td></tr>
+<tr><td>Mokas</td><td>123</td><td>Zloděj</td></tr>
+<tr><td>Maxim</td><td>123</td><td>Zloděj</td></tr>
+<tr><td>Brodan</td><td>123</td><td>Zloděj</td></tr>
+<tr><td>Gejda</td><td>123</td><td>Zloděj</td></tr>
+<tr><td>Morous</td><td>123</td><td>Zloděj</td></tr>
+<tr><td>Hori</td><td>123</td><td>Zloděj</td></tr>
+</tbody></table>
+
+<h2>Implementace</h2>
+<h3>Backend</h3>
+<p>Skripty umístěné ve složce php jsou určeny především pro zloděje, vyjímkou jsou skripty db_connect.php který zajišťuje připojení k databázi, login.php a logout.php které zajišťují prihlášení a odhlášení a session_control.php který zajišťuje kontrolu přihlášení. Skripty začínající (data jsou vrácena jako JSON):</p>
+<ul>
+  <li>"my" vrací json s údají které se vztahují na zloděje</li>
+  <li>"owned" vrací vlastněné předměty a školení</li>
+  <li>"do" provádí trénink</li>
+  <li>"free" vrací volné předměty a poukázky</li>
+  <li>"get" vrací zloděje</li>
+  <li>"leave" odkládá předměty</li>
+  <li>php skript letsSteal provádí loupež</li>
+  <li>"notOwned" vrací nevlastnění předměty</li>
+  <li>takeGear.php bere výbavu</li>
+  <li>"stat" vrací statistiky</li>
+</ul>
+<p>Složka admin obsahuje skripty pro úpravy položek:</p>
+<ul>
+  <li>"add" přidává nové položky</li>
+  <li>"get" vrací položky</li>
+  <li>"update" upravuje položky</li>
+</ul>
+<h3>Frontend</h3>
+<p>Aplikace je z pohledu uživatelského rozhraní rozdělena na dvě hlavní části (uživatel a admin).</p>
+<p>Uživatel má, v průběhu celé práce s aplikací, k dispozici informace o svém účtu a navigační menu pod svým účtem. Každá položka navigačního okna umožňuje práci s jinou tabulkou databáze:</p>
+<ul>
+    <li><strong>Territories:</strong> Informuje uživatele o všech existujících rajónech cechu. Má k dispozici potřebné informace pro rozhodování, zda-li opustit rajón, ve kterém již operuji, či se přidat do nového rajonu.</li>
+    <li><strong>Equipment:</strong> Dovoluje uživateli práci s jeho i volným vybavením.</li>
+    <li><strong>Training:</strong> Uživatel může podstupovat školení, která mu odemknout práci s novým vybavením, popř. umožní podstoupit nové typy loupeží. Jedná se o část aplikace, která zpřístupňuje manipulaci s většinou operací, která se v aplikaci nacházejí.</li>
+    <li><strong>Robbery:</strong> Loupeže uživatel vykonává jako posloupnost operací. V horní části obrazovky je k dispozici tabulka s vybranými položkami dílčích operací.</li>
+    <li><strong>History:</strong> Uživatel si může prohlédnout historii svých loupeží, které vykonal.</li>
+    <li><strong>Statistics:</strong> Pokud chce uživatel získat informace o tom, kdo jak moc loupí, je vytvořena statistika v sestupném formátu o všech zlodějích a počtu loupeží, které vykonali.</li>
+    <li><strong>Logout:</strong> Slouží pro odhlášení uživatele</li>
+</ul>
+<p>Admin má též přístup ke stejným položkám, jako uživatel, ale negenerují se mu statistiky. Místo toho mu přibyla položka <strong>Edit</strong>, která umožňuje upravovat různé parametry položek tabulek (zloděje, loupeže, vybavení, typy vybavení, rajóny). Tak, jak může upravovat jednotlivé položky, může také vytvářet nové záznamy.</p>
+<p>Změny tabulek: v tabulce zlodej bylo přidáno heslo a flag určující zda se jedná o zloděje či vůdce</p>
+<p>Změna use-case: use-case byl imlementován kompletně celý, přidali jsme pro zloděje možnost přidat se či opustit rajon, tato možnost nám přišla logická a v use case pro IDS byla opomenuta</p>
+
+<h2>Instalace</h2>
+<ul>
+<li>Probíhá překopírovaním souborů na server do cílové složky
+<li>Potřebné PHP 5.6 a MySQL 5.5.</li>
+<li>Databáze se inicializuje skriptem <em>create.sql</em> který se importuje přes systém phpMyAdmin.</li>
+</ul>
+
+<h2>Známé problémy</h2>
+<p>Uživatel není po odhlášení serverem po neaktivitě automaticky odkázán na login, ale je stále ponechán na součásné stránce, ze které se může dostat aktualizací okna, popř. položkou logout.</p>
+
+</body></html>
