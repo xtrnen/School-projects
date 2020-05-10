@@ -1,2 +1,2 @@
 # School-projects
-**italic** Few of my school projects.
+* Few of my school projects.*
